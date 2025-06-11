@@ -35,5 +35,6 @@ def get_pairs_number(lst: list[int], n) -> list[tuple]:
 assert (get_pairs_number([1, 2, 4, 3, 5, 2], 8)) == [(3,5)]
 assert (get_pairs_number([1, 2, 4, 3, 5, 2], 6)) == [(2,4)]
 assert (get_pairs_number([1, 2, 4, 3, 5, 2], 7)) == [(4,3), (5,2)]
+assert (get_pairs_number([1, 2, 4, 3, 5, 2], 7)) == [(4,3), (5,2)]
 print("all tests passed")
 
