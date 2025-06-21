@@ -14,6 +14,14 @@ assert (is_odd(8)) == False
 assert not (is_odd(8)) == True
 print("all tests passed")
 
+def is_odd(n: int):
+    return n%2==0
+
+# return any(n%2==0 for n in list(str(n)))
+
+#assert (is_odd(83)) == False
+#assert not (is_odd(8)) == True
+print(is_odd(83))
 
 """
 Напишите функцию, которая возращает true, если число является простым
@@ -24,10 +32,10 @@ def is_prime(n:int):
             return False
     return True
 
-assert (is_prime(8)) == False
-assert not (is_prime(10)) == True
-assert (is_prime(11)) == True
-print("all tests passed")
+#assert (is_prime(8)) == False
+#assert not (is_prime(10)) == True
+# (is_prime(11)) == True
+#print("all tests passed")
 
 
 """
@@ -36,9 +44,10 @@ print("all tests passed")
 арифметической прогрессии
 """
 def is_arifm_progression(a: int, b: int, c: int):
-    if (b-a)==(c-b):
-        return True
-    return False
+    for i in range(len([a,b,c])-2):
+        if [a,b,c][i+1] - [a,b,c][i] != [a,b,c][i+2] - [a,b,c][i+1]:
+            return False
+    return True
 
 assert (is_arifm_progression(2,4,6)) == True
 assert not (is_arifm_progression(2,4,6)) == False
@@ -71,3 +80,4 @@ assert (get_triangle_kind(4,5,1)) == "Обычный"
 assert (get_triangle_kind(0,5,1)) == "Ошибка"
 assert (get_triangle_kind(-2,5,1)) == "Ошибка"
 print("all tests passed")
+

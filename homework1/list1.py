@@ -15,6 +15,26 @@ assert not (is_list_growing([1.2, 1.4, 2.5, 0.1])) == True
 assert (is_list_growing([1.2, 1.4, 2.5, 0.1])) == False
 print("all tests passed")
 
+
+def is_list_growing(lst: list[float]) -> bool:
+    return all (lst [i+1] >lst[i]   for i in range (len(lst)-1))
+
+
+assert (is_list_growing([1.2, 1.4, 2.5, 3.1])) == True
+assert not (is_list_growing([1.2, 1.4, 2.5, 0.1])) == True
+assert (is_list_growing([1.2, 1.4, 2.5, 0.1])) == False
+print("all tests passed")
+
+
+a=filter(is_list_growing,lst)
+for i in a:
+        print(i)
+
+print(is_list_grow([1,2,4,5]))
+
+
+
+
 """
     Дан список целых чисел и определенное заданное число. Найти все пары из списка,
     сумма которых равна этому числу.
